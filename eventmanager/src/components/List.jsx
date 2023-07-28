@@ -42,12 +42,18 @@ const List = ({ users, updateUser, fetchUsers }) => {
   };
 
   return (
-    <ul>
+    <ul className="user-list">
       {users.map((user) => (
-        <li key={user._id}>
-          <p>Name: {user.name}</p>
-          <p>Email: {user.email}</p>
-          <p>Birthdate: {formatDate(user.birthdate)}</p>
+        <li key={user._id} className="user-item">
+          <div className="user-column">
+            <p>Name: {user.name}</p>
+          </div>
+          <div className="user-column">
+            <p>Email: {user.email}</p>
+          </div>
+          <div className="user-column">
+            <p>Birthdate: {formatDate(user.birthdate)}</p>
+          </div>
 
           <UpdateButton
             user={user}

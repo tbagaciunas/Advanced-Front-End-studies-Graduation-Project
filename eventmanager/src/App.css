@@ -97,6 +97,7 @@ form button {
 ul {
   list-style: none;
   padding: 0;
+  text-align: le;
 }
 
 li {
@@ -115,12 +116,16 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  text-align: left;
 }
 
 li p {
   margin: 8px 0;
 }
-
+.user-column {
+  max-width: 90px;
+}
 /* Button styles */
 button {
   position: relative;
