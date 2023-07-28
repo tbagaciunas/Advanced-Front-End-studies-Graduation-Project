@@ -1,4 +1,4 @@
-/* App.css */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 
 /* Global styles */
 body {
@@ -6,7 +6,10 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
+  background-color: #4158d0;
+  background-image: url("../assets/event.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .container {
@@ -17,41 +20,77 @@ body {
 
 h1 {
   margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 h2 {
   margin-top: 40px;
   margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Form styles */
 form {
   display: flex;
-  flex-direction: column;
-  background-color: #fff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  background-color: #0094e93b;
+  background-image: linear-gradient(160deg, #0094e910 0%, #80d0c71e 100%);
+  margin: auto;
+  width: 80%;
+  color: white;
+
+  font-family: "Raleway", sans-serif;
+  z-index: -2;
 }
 
 form label {
   margin-bottom: 8px;
+
+  font-family: "Raleway", sans-serif;
 }
 
 form input {
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 0.8vw;
+  color: #fff;
+  background-color: rgba(28, 28, 30, 0.521);
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  max-width: 190px;
+  transition: 0.4s;
+  margin: 10px;
 }
 
+form input:hover {
+  box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+}
+
+form input:focus {
+  box-shadow: 0 0 0 0.15vw skyblue;
+}
 form button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  margin-left: 100px;
 }
 
 /* List styles */
@@ -61,11 +100,21 @@ ul {
 }
 
 li {
-  background-color: #fff;
+  background-color: #5e696e9a;
+  background-image: linear-gradient(160deg, #0094e910 0%, #80d0c71e 100%);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 80%;
+  margin-top: 30px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 li p {
@@ -74,19 +123,100 @@ li p {
 
 /* Button styles */
 button {
-  padding: 8px 16px;
-  background-color: #007bff;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-button.update {
-  background-color: #ffc107;
-  margin-right: 8px;
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-button.delete {
-  background-color: #dc3545;
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+#submit {
+  border: 1px solid rgb(63, 212, 33);
+}
+
+#submit:hover {
+  background: rgb(108, 250, 150);
+  box-shadow: 0 0 30px 5px rgba(69, 177, 20, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: black;
+}
+
+#delete:hover {
+  background: rgb(211, 40, 40);
+  box-shadow: 0 0 30px 5px rgba(240, 114, 56, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: rgb(255, 255, 255);
+}
+
+#delete {
+  border: 1px solid rgb(236, 44, 38);
 }

@@ -11,13 +11,29 @@ const App = () => {
     setUsers([...users, user]);
   };
 
+  const fetchUsers = async () => {
+    // Implement the fetching logic here (similar to how it is done in the List component)
+    try {
+      const response = await fetch("http://localhost:5000/api/users", {
+        method: "GET",
+      });
+      if (!response.ok) {
+        throw new Error("Failed to fetch users: Server returned an error");
+      }
+      const data = await response.json();
+      setUsers(data);
+    } catch (error) {
+      console.error("Failed to fetch users:", error);
+    }
+  };
+
   return (
     <div className="App">
-      <h1>User Registration Form</h1>
-      <Form addUser={addUser} />
+      <h1>Event Manager</h1>
+      <Form addUser={addUser} fetchUsers={fetchUsers} />
 
-      <h2>User List</h2>
-      <List users={users} />
+      <h2>Users List</h2>
+      <List users={users} fetchUsers={fetchUsers} />
     </div>
   );
 };

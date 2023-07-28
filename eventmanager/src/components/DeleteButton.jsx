@@ -6,7 +6,11 @@ const DeleteButton = ({ deleteUser }) => {
     deleteUser();
   };
 
-  return <button onClick={handleDelete}>Delete</button>;
+  return (
+    <button id="delete" onClick={handleDelete}>
+      Delete
+    </button>
+  );
 };
 
 export default DeleteButton;
