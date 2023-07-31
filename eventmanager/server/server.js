@@ -1,11 +1,8 @@
-// server.js
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-// Create an Express app
 const app = express();
 
 // Middleware
@@ -32,7 +29,7 @@ db.once("open", () => {
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  birthdate: { type: Date, required: true }, // Change from age to birthdate
+  birthdate: { type: Date, required: true },
 });
 
 const User = mongoose.model("User", userSchema);
@@ -42,8 +39,8 @@ const User = mongoose.model("User", userSchema);
 // Create a new user
 app.post("/api/users", async (req, res) => {
   try {
-    const { name, email, birthdate } = req.body; // Change from age to birthdate
-    const newUser = new User({ name, email, birthdate }); // Change from age to birthdate
+    const { name, email, birthdate } = req.body;
+    const newUser = new User({ name, email, birthdate });
     await newUser.save();
     res.status(201).json(newUser);
     console.log("Request body:", req.body);
@@ -66,10 +63,10 @@ app.get("/api/users", async (req, res) => {
 app.put("/api/users/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, email, birthdate } = req.body; // Change from age to birthdate
+    const { name, email, birthdate } = req.body;
     const updatedUser = await User.findByIdAndUpdate(
       id,
-      { name, email, birthdate }, // Change from age to birthdate
+      { name, email, birthdate },
       { new: true }
     );
     res.json(updatedUser);
@@ -78,7 +75,7 @@ app.put("/api/users/:id", async (req, res) => {
   }
 });
 
-// Delete a user by ID
+// Delete a user
 app.delete("/api/users/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -90,7 +87,7 @@ app.delete("/api/users/:id", async (req, res) => {
 });
 
 // Start the server
-const port = 5000; // Choose any port number you prefer
+const port = 5000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

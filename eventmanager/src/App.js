@@ -6,13 +6,12 @@ import List from "./components/List";
 const App = () => {
   const [users, setUsers] = useState([]);
 
-  // Function to add a new user to the list
+  //  add a new user to the list
   const addUser = (user) => {
     setUsers([...users, user]);
   };
 
   const fetchUsers = async () => {
-    // Implement the fetching logic here (similar to how it is done in the List component)
     try {
       const response = await fetch("http://localhost:5000/api/users", {
         method: "GET",

@@ -4,7 +4,7 @@ import DeleteButton from "./DeleteButton";
 
 const List = ({ users, updateUser, fetchUsers }) => {
   useEffect(() => {
-    fetchUsers(); // Fetch users when the component mounts and whenever fetchUsers function changes
+    fetchUsers(); // Fetch users
   }, [fetchUsers]);
 
   const deleteUser = async (userId) => {
