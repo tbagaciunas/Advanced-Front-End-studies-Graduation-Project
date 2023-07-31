@@ -1,0 +1,59 @@
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 20px;
+  
+    background-color: #0094e93b;
+    background-image: linear-gradient(160deg, #0094e910 0%, #80d0c71e 100%);
+    margin: auto;
+    width: 80%;
+    color: white;
+  
+    font-family: "Raleway", sans-serif;
+    z-index: -2;
+  }
+  
+  form label {
+    margin-bottom: 8px;
+  
+    font-family: "Raleway", sans-serif;
+  }
+  
+  form input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    color: #fff;
+    background-color: rgba(28, 28, 30, 0.521);
+    box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    padding: 0.4vw;
+    max-width: 190px;
+    transition: 0.4s;
+    margin: 10px;
+  }
+  
+  form input:hover {
+    box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+  }
+  
+  form input:focus {
+    box-shadow: 0 0 0 0.15vw skyblue;
+  }
+  form button {
+    margin-left: 100px;
+  }

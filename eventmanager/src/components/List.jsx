@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import UpdateButton from "./UpdateButton";
-import DeleteButton from "./DeleteButton";
+import DeleteButton from "./DeleteButton/DeleteButton";
 
 const List = ({ users, updateUser, fetchUsers }) => {
   useEffect(() => {

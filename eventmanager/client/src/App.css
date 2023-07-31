@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #4158d0;
+  background-image: url("../assets/event.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+

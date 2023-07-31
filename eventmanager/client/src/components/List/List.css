@@ -1,0 +1,34 @@
+/* List styles */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: le;
+  }
+  
+  li {
+    background-color: #5e696e9a;
+    background-image: linear-gradient(160deg, #0094e910 0%, #80d0c71e 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    width: 80%;
+    margin-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    text-align: left;
+  }
+  
+  li p {
+    margin: 8px 0;
+  }
+  .user-column {
+    max-width: 90px;
+  }
