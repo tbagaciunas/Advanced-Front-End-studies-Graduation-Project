@@ -30,10 +30,7 @@ Event Manager is a web application built as part of my graduation project for my
 
 - Express.js: A Node.js framework for creating web applications and APIs.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+![Event Manager Logo](logo.png)
 ---
 
 Enjoy using Event Manager for your event planning needs!
