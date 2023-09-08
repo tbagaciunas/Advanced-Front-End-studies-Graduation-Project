@@ -30,7 +30,7 @@ Event Manager is a web application built as part of my graduation project for my
 
 - Express.js: A Node.js framework for creating web applications and APIs.
 
-![Event Manager Logo](logo.png)
+![Event Manager Logo](image.png)
 ---
 
 Enjoy using Event Manager for your event planning needs!
