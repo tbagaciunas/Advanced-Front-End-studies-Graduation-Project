@@ -8,7 +8,7 @@ Event Manager is a web application built as part of my graduation project for my
 
 - **User Registration:** Easily add new attendees to the event list.
 
-- **User Update:** Edit and update existing attendee information.
+- **User Update:** Edit and update existing attendee information
 
 - **User Deletion:** Remove attendees from the list as needed.
 
